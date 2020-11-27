@@ -7,7 +7,7 @@ A docker container for running the summarisation API
 ### To install
 ```
 nvidia-docker build -t summarisation_api .
-nvidia-docker run -p 5008:5008 --name summarisation_api -i -t summarisation_api
+nvidia-docker run -p 5000:5000 --name summarisation_api -i -t summarisation_api
 exit()
 ```
 

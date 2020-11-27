@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM python:3.7
 RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install -y git && \

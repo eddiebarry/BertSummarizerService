@@ -196,10 +196,11 @@ class Summariser():
         md_result = []
         for idx, x in enumerate(sentences):
             if idx in hidden_args:
-                md_result.append("## "+x+"\n" )
+                md_result.append("\n## "+x+"\n" )
             else:
                 md_result.append(x)
 
+        print(md_result)
         result = ''.join(result).replace('.','.\n')
         md_result = ''.join(md_result).replace('.','.\n')
         return result, md_result

@@ -190,8 +190,19 @@ class Summariser():
 
         result = [sentences[j] for j in hidden_args]
 
+
+        # md_result = [x if (idx in hidden_args) else " *** "+x+" *** "  for idx, x in enumerate(sentences)  ]
+
+        md_result = []
+        for idx, x in enumerate(sentences):
+            if idx in hidden_args:
+                md_result.append(" *** "+x+" *** " )
+            else:
+                md_result.append(x)
+
         result = ''.join(result).replace('.','.\n')
-        return result
+        md_result = ''.join(md_result).replace('.','.\n')
+        return result, md_result
 
 
 if __name__ == "__main__":

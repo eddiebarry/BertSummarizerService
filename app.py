@@ -41,10 +41,11 @@ def answer_question():
             return jsonify({"message":"given request does not have a "+x })
     
     body = request_json['body']
-    summary = app.config['Summariser'].cluster(body)
+    summary, markdown_text = app.config['Summariser'].cluster(body)
 
     response = {
         "summary":summary,
+        "markdown_text":markdown_text,
     }
 
     return jsonify(response)

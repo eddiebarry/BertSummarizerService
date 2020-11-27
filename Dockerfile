@@ -1,7 +1,8 @@
 FROM ubuntu:18.04
 RUN apt-get update && \
     apt-get upgrade -y && \
-    apt-get install -y git
+    apt-get install -y git && \
+    apt-get install -y python-pip
 WORKDIR /usr/src
 RUN git clone https://github.com/eddiebarry/BertSummarizerService.git
 WORKDIR /usr/src/BertSummarizerService

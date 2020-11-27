@@ -1,6 +1,7 @@
 import requests, json
 
 url = "http://0.0.0.0:5000"
+url = "http://18.203.115.216:5000"
 """
 Test Summarisation
 """

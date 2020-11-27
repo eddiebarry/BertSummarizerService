@@ -196,7 +196,7 @@ class Summariser():
         md_result = []
         for idx, x in enumerate(sentences):
             if idx in hidden_args:
-                md_result.append(" *** "+x+" *** " )
+                md_result.append("## "+x+"\n" )
             else:
                 md_result.append(x)
 

@@ -1,4 +1,4 @@
-import requests, json
+import requests, json, pdb
 
 url = "http://0.0.0.0:5000"
 url = "http://18.203.115.216:5000"
@@ -35,4 +35,6 @@ Once the competitor could rise no higher, the spire of the Chrysler building was
 }
 
 r = requests.get(base_url, data=json.dumps(data))
+# pdb.set_trace()
 print(r.text)
+# print(r.json())

@@ -1,8 +1,8 @@
+numpy
 neuralcoref
 bert-extractive-summarizer
 spacy
 transformers==2.2.2
-numpy
 sklearn
 torch
 flask

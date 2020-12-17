@@ -3,7 +3,7 @@ RUN apt-get update && apt-get install --no-install-recommends --no-install-sugge
 RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install -y git && \
-    apt-get install -y python-pip
+    apt-get install -y python3-pip
 WORKDIR /usr/src
 ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache
 RUN git clone https://github.com/eddiebarry/BertSummarizerService.git

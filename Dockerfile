@@ -1,9 +1,8 @@
 FROM nvidia/cuda:10.2-base
-RUN apt-get update && apt-get install --no-install-recommends --no-install-suggests -y curl
+RUN apt-get update && apt-get install --no-install-recommends --no-install-suggests -y curl && apt-get -y install python3.7
 RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install -y git && \
-    apt-get -y install python3.7 &&\
     apt-get install -y python-pip
 WORKDIR /usr/src
 ADD "https://www.random.org/cgi-bin/randbyte?nbytes=10&format=h" skipcache

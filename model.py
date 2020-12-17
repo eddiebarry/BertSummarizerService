@@ -155,6 +155,7 @@ class Summariser():
         self.SentenceHandler = SentenceHandler()
         self.BertTokenizer = BertTokenizer.from_pretrained('bert-large-uncased')
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        print("using", self.device)
         self.BertModel = BertModel.from_pretrained('bert-large-uncased', output_hidden_states=True).to(self.device).eval()        
 
     def cluster(self, body,ratio=0.3):
